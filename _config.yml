@@ -1,7 +1,7 @@
 remote_theme: daattali/beautiful-jekyll@3.0.0
 
 baseurl: "/dotnetcore-tutorials"
-url: "https://sandeepnkulkarni.github.io/"
+url: "https://sandeepnkulkarni.github.io"
 
 # --- Basic options --- #
 
