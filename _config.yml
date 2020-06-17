@@ -29,10 +29,6 @@ avatar: assets/img/sk_logo_medium.png
 # By default, the image is cut into a circle. You can disable this behaviour here.
 round-avatar: true
 
-# If you want to have an image logo in the top-left corner instead of the title text,
-# then specify the following parameter
-title-img: assets/img/sk_logo_medium.png
-
 # --- Footer options --- #
 
 # Select the social network links that you want to show in the footer.
