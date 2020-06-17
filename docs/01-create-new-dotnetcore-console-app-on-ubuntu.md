@@ -143,7 +143,7 @@ dotnet hellodotnet.dll
 
 It is possible to publish application as self-contained. Doing so also publishes the .NET Core runtime with your application so the runtime doesn't need to be installed on the target machine.
 
-To create a self-contained along with runtime identifier for Linux x64, run below command:
+To create a self-contained along with runtime identifier for Linux x64 (Most desktop distributions like CentOS, Debian, Fedora, Ubuntu, and derivatives), run below command:
 
 ```
 dotnet publish --configuration Release --self-contained true --runtime linux-x64
@@ -160,6 +160,8 @@ Copyright (C) Microsoft Corporation. All rights reserved.
   hellodotnet -> /home/testuser/hellodotnet/bin/Release/netcoreapp2.1/linux-x64/publish/
 ```
 
+You will need to distribute all the files under publish directory to the hosting system.
+
 A platform specific executable will also be created in the publish directory which you can use to run your application directory like below:
 
 ```
@@ -169,9 +171,10 @@ A platform specific executable will also be created in the publish directory whi
 Hello .Net Core!
 ```
 
-Please check Microsoft webesite to get list of runtime identifier for other supported OSes.
+Please check Microsoft webesite under References section below to get list of runtime identifier for other supported OSes.
 
 ### References:
 
 <https://docs.microsoft.com/en-us/dotnet/core/install/linux-ubuntu>
+
 <https://docs.microsoft.com/en-us/dotnet/core/rid-catalog>
