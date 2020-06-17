@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add worker node to Kubernetes Cluster
+title: Create self-contained self-contained .Net Core docker image
 date: 2020-06-18 15:00:00 +0530
 ---
 
