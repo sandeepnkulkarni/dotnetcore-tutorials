@@ -1,4 +1,30 @@
+remote_theme: daattali/beautiful-jekyll@3.0.0
+
 baseurl: "/dotnetcore-tutorials"
 url: "https://sandeepnkulkarni.github.io/"
 
-remote_theme: daattali/beautiful-jekyll@3.0.0
+# --- Basic options --- #
+
+# Name of website
+title: .Net Core Tutorials
+
+# Short description of your site
+description: .Net Core Tutorials to get you started!
+
+# Your name to show in the footer
+author: Sandeep Kulkarni
+
+# --- List of links in the navigation bar --- #
+
+navbar-links:
+  Home: "/"
+  About me: "https://sandeepnkulkarni.github.io"
+
+# --- Footer options --- #
+
+# Select the social network links that you want to show in the footer.
+# Uncomment the links you want to show and add your information to each one.
+# If you don't want to show a link to an RSS feed, set rss to "false".
+social-network-links:
+  rss: true
+  github: sandeepnkulkarni
