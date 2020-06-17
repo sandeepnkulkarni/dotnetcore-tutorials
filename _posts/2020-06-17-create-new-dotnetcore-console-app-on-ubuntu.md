@@ -1,3 +1,9 @@
+---
+layout: post
+title: Create new .Net core console application on Ubuntu
+date: 2020-06-17 14:00:00 +0530
+---
+
 # Create new .Net core console application on Ubuntu
 
 .NET Core SDK allows you to develop apps with .NET Core.
