@@ -175,6 +175,5 @@ Please check Microsoft webesite under References section below to get list of ru
 
 ### References:
 
-<https://docs.microsoft.com/en-us/dotnet/core/install/linux-ubuntu>
-
-<https://docs.microsoft.com/en-us/dotnet/core/rid-catalog>
+* <https://docs.microsoft.com/en-us/dotnet/core/install/linux-ubuntu>
+* <https://docs.microsoft.com/en-us/dotnet/core/rid-catalog>
