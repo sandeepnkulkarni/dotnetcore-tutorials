@@ -106,6 +106,7 @@ Removing intermediate container d05ba4f6e320
 Successfully built 9c47434bb6f7
 ```
 
+
 ## Run docker container
 
 To run the docker image as a container, use below command:
@@ -116,6 +117,7 @@ docker run --name hellodocker2 hellodocker:2.0
 # Output
 Hello Docker!
 ```
+
 
 ## Docker image size difference
 
@@ -128,9 +130,9 @@ docker images
 Sample Output:
 
 ```
-REPOSITORY                                                                      TAG                 IMAGE ID            CREATED             SIZE
-hellodocker                                                                     2.0                 9ff4eeed6631        2 minutes ago       138 MB
-hellodocker                                                                     1.0                 0a19597e8d5e        24 hours ago        180 MB
+REPOSITORY         TAG                 IMAGE ID            CREATED             SIZE  
+hellodocker        2.0                 9ff4eeed6631        2 minutes ago       138 MB
+hellodocker        1.0                 0a19597e8d5e        24 hours ago        180 MB
 ```
 
 If we use smaller docker images like Apline (or for that matter any slim docker image), size will reduce even further.
