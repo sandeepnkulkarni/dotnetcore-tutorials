@@ -4,9 +4,7 @@ title: Run .Net Core console application inside Docker container
 date: 2020-06-17 16:00:00 +0530
 ---
 
-# Run .Net Core console application inside Docker container
-
-Refer to [Create new .Net core console application on Ubuntu](2020-06-17-create-new-dotnetcore-console-app-on-ubuntu.md) to understand in detail how to create .Net Core console application on Ubuntu.
+Refer to [Create your first .Net core console application on Ubuntu](2020-06-17-create-first-dotnetcore-console-app-on-ubuntu.md) to understand in detail how to create your first .Net Core console application on Ubuntu.
 
 I will assume that you already have basic understanding about Docker and have access to a machine with Docker client installed.
 
