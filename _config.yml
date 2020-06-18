@@ -31,9 +31,7 @@ round-avatar: true
 
 # If you want to have an image logo in the top-left corner instead of the title text,
 # then specify the following parameter
-# title-img: "/assets/img/dotnetcore_logo.png"
-
-favicon: assets/sk_favicon.ico
+title-img: "/assets/img/dotnetcore_logo.png"
 
 # Excerpt Word Length - Truncates the excerpt to the specified number of words on the index page
 excerpt_length: 100
