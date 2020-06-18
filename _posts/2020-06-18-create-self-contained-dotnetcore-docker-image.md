@@ -4,9 +4,7 @@ title: Create self-contained .Net Core console application docker image
 date: 2020-06-18 16:00:00 +0530
 ---
 
-# Create self-contained .Net Core console application docker image
-
-Refer to [Create new .Net core console application on Ubuntu](2020-06-17-create-new-dotnetcore-console-app-on-ubuntu.md) to understand basics about how to create .Net Core console application. We will reuse the application created here.
+Refer to [Create your first .Net Core console application on Ubuntu](2020-06-17-create-first-dotnetcore-console-app-on-ubuntu.md) to understand basics about how to create .Net Core console application. We will re-use the application created here.
 
 ## Publish self-contained application
 
