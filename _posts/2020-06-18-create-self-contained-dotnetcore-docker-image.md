@@ -77,7 +77,7 @@ FROM ubuntu:18.04
 
 WORKDIR /app
 
-COPY /bin/Release/netcoreapp2.1/publish/ .
+COPY /bin/Release/netcoreapp2.1/linux-x64/publish/ .
 
 ENTRYPOINT ["./hellodocker"]
 ```
