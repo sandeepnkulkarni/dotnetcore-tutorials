@@ -58,7 +58,7 @@ Docker image can be created with below command:
 docker build -t hellodocker:1.0 .
 ```
 
-In above coammand, with parameter `-t` we have specified that we want to name docker image `hellodocker` and tag as `1.0`.
+In above command, with parameter `-t` we have specified that we want to name docker image `hellodocker` and tag as `1.0`.
 
 Sample output:
 
