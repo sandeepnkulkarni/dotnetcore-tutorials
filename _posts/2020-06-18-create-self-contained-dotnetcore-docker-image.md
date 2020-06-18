@@ -6,7 +6,7 @@ date: 2020-06-18 16:00:00 +0530
 
 # Create self-contained .Net Core console application docker image
 
-Refer to [Create new .Net core console application on Ubuntu](2020-06-17-create-new-dotnetcore-console-app-on-ubuntu.md) to understand basics about how to create console application.
+Refer to [Create new .Net core console application on Ubuntu](2020-06-17-create-new-dotnetcore-console-app-on-ubuntu.md) to understand basics about how to create .Net Core console application. We will reuse the application created here.
 
 ## Publish self-contained application
 
@@ -28,7 +28,6 @@ Resultant hellodocker.csproj:
   </PropertyGroup>
 
 </Project>
-
 ```
 
 If we don't include globalization invariant mode setting, we will fail with below error when we run it inside a container:
@@ -46,7 +45,6 @@ Couldn't find a valid ICU package installed on the system. Set the configuration
    at System.StringComparer..cctor()
    at System.AppDomain.InitializeCompatibilityFlags()
    at System.AppDomain.Setup(System.Object)
-
 ```
 
 To create a self-contained along with runtime identifier for Linux x64 (suitable for most desktop distributions like CentOS, Debian, Fedora, Ubuntu, and derivatives), run below command:
@@ -121,14 +119,17 @@ docker run --name hellodocker2 hellodocker:2.0
 Hello Docker!
 ```
 
-## Size difference
+## Docker image size difference
 
 As we have used a different base image and included only the required .Net Core runtime for the application, docker image size is smaller. This can be verified by running `docker images` command:
 
 ```
 docker images
+```
 
-# Output
+Sample Output:
+
+```
 REPOSITORY                                                                      TAG                 IMAGE ID            CREATED             SIZE
 hellodocker                                                                     2.0                 9ff4eeed6631        2 minutes ago       138 MB
 hellodocker                                                                     1.0                 0a19597e8d5e        24 hours ago        180 MB
