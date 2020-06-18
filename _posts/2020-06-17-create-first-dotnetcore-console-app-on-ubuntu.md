@@ -36,6 +36,7 @@ Run below commands to install .Net core SDK 2.1 on Ubuntu 18.04:
 }
 ```
 
+
 ## Create new console application 
 
 Run below command to create new console application with name `hellodotnet`:
@@ -72,6 +73,7 @@ Sample output:
 Hello .Net Core!
 ```
 
+
 ## Build the application with specific configuration
 
 To build the project in Release configuration, run below command inside `hellodotnet` directory:
@@ -102,6 +104,7 @@ To build the project in Debug configuration, run below command inside `hellodotn
 ```
 dotnet build --configuration Debug
 ```
+
 
 ## Publish the application
 
@@ -142,6 +145,7 @@ Hosting system need to have .Net Core 2.1 runtime installed to run the applicati
 ```
 dotnet hellodotnet.dll
 ```
+
 
 ## Publish self-contained application
 
