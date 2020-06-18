@@ -88,6 +88,7 @@ REPOSITORY          TAG                 IMAGE ID            CREATED             
 hellodocker         1.0                 be9d0437b610        54 seconds ago      180 MB
 ```
 
+
 ## Run docker container
 
 To run the docker image as a container, use below command:
