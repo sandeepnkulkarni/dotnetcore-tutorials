@@ -8,7 +8,7 @@
 .dotnetcore-tutorial-info {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background: #FFF5EE;
-  padding: 10px 10px;
+  padding: 15px 15px;
 }
 
 .dotnetcore-tutorial-info p {
@@ -19,6 +19,6 @@
 
 @media (min-width: 512px) {
   .dotnetcore-tutorial-info {
-    padding: 10px 10px;
+    padding: 15px 15px;
   }
 }
