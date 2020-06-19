@@ -1,0 +1,24 @@
+#created-by {
+  text-align: right;
+  margin-top: 1.875rem;
+  color: #777;
+  font-size: 0.9em;
+}
+
+.dotnetcore-tutorial-info {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: #F8E7C9;
+  padding: 1.25rem 0.9375rem;
+}
+
+.dotnetcore-tutorial-info p {
+  margin-bottom: 0.9375rem;
+  font-size: 1.3125rem;
+  font-weight: 200;
+}
+
+@media (min-width: 768px) {
+  .dotnetcore-tutorial-info {
+    padding: 3rem 3.75rem;
+  }
+}
