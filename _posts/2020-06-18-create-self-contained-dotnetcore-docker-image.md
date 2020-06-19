@@ -9,7 +9,7 @@ Refer to [Create your first .Net Core console application on Ubuntu](2020-06-17-
 
 ## Publish self-contained application
 
-Open hellodocker.csproj and set globalization invariant mode by adding line under `<PropertyGroup>` tag.
+Open hellodocker.csproj and enable globalization invariant mode by adding line under `<PropertyGroup>` tag.
 
 ```
 <InvariantGlobalization>true</InvariantGlobalization>
@@ -45,6 +45,28 @@ Couldn't find a valid ICU package installed on the system. Set the configuration
    at System.AppDomain.InitializeCompatibilityFlags()
    at System.AppDomain.Setup(System.Object)
 ```
+
+There are two other approaches to enable globalization invariant mode:
+
+1. In runtimeconfig.json file by adding `"System.Globalization.Invariant": true` like below:
+
+```
+{
+    "runtimeOptions": {
+        "configProperties": {
+            "System.Globalization.Invariant": true
+        }
+    }
+}
+```
+
+2. Setting environment variable `DOTNET_SYSTEM_GLOBALIZATION_INVARIANT` to `true` or `1` inside the docker file like below:
+
+```
+ENV DOTNET_SYSTEM_GLOBALIZATION_INVARIANT true
+```
+
+Please refer to **.NET Core Globalization Invariant Mode** document mentioned under [References](#references) below.
 
 To create a self-contained along with runtime identifier for Linux x64 (suitable for most desktop distributions like CentOS, Debian, Fedora, Ubuntu, and derivatives), run below command:
 
@@ -142,3 +164,4 @@ If we use smaller docker images like Apline (or for that matter any slim docker 
 
 * <https://hub.docker.com/_/ubuntu>
 * <https://docs.microsoft.com/en-us/dotnet/core/run-time-config/globalization>
+* <https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md>
