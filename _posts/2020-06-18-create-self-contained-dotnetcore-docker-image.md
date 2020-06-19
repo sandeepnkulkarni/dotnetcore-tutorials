@@ -7,9 +7,9 @@ tags: [.net, core, console, self-contained, docker, ubuntu]
 
 Refer to [Create your first .Net Core console application on Ubuntu](2020-06-17-create-first-dotnetcore-console-app-on-ubuntu.md) to understand basics about how to create .Net Core console application. We will re-use the application created here.
 
-## Publish self-contained application
+## Enabling the Globalization Invariant Mode
 
-Open hellodocker.csproj and enable globalization invariant mode by adding line under `<PropertyGroup>` tag.
+Open hellodocker.csproj and enable Globalization Invariant Mode by adding following line under `<PropertyGroup>` tag.
 
 ```
 <InvariantGlobalization>true</InvariantGlobalization>
@@ -29,7 +29,7 @@ Resultant hellodocker.csproj:
 </Project>
 ```
 
-If we don't include globalization invariant mode setting, we will fail with below error when we run it inside a container:
+If we don't enable Globalization Invariant Mode setting, we will fail with below error when we run it inside a container:
 
 ```
 FailFast:
@@ -67,6 +67,10 @@ ENV DOTNET_SYSTEM_GLOBALIZATION_INVARIANT true
 ```
 
 Please refer to **.NET Core Globalization Invariant Mode** document mentioned under [References](#references) below.
+
+In case you like to use Globalization feature instead, you will need to install the ICU package inside the docker image.
+
+## Publish self-contained application
 
 To create a self-contained along with runtime identifier for Linux x64 (suitable for most desktop distributions like CentOS, Debian, Fedora, Ubuntu, and derivatives), run below command:
 
