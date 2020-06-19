@@ -2,6 +2,7 @@
 layout: post
 title: Create your first .Net Core console application on Ubuntu
 date: 2020-06-17 14:00:00 +0530
+tags: [.net][core][console][ubuntu]
 ---
 
 .NET Core is a cross-platform version of .NET for building websites, services, and console applications. .NET Core SDK allows you to develop apps with .NET Core.
