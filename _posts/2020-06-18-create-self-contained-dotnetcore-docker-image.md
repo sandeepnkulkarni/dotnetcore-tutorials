@@ -5,7 +5,7 @@ date: 2020-06-18 16:00:00 +0530
 tags: [.net, core, console, self-contained, docker, ubuntu]
 ---
 
-Refer to [Create your first .Net Core console application on Ubuntu](2020-06-17-create-first-dotnetcore-console-app-on-ubuntu.md) to understand basics about how to create .Net Core console application. We will re-use the application created here.
+Refer to section **Create new console application** in [Create your first .Net Core console application on Ubuntu](./2020-06-17-create-first-dotnetcore-console-app-on-ubuntu.md) to understand basics about how to create .Net Core console application. We will re-use the application created here.
 
 ## Enabling the Globalization Invariant Mode
 
