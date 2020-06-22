@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Create multi-stage docker build for self-contained .Net Core console application docker image
-date: 2020-06-18 16:00:00 +0530
+title: Use multi-stage docker build for creating docker image of self-contained .Net Core console application
+date: 2020-06-22 14:00:00 +0530
 tags: [.net, core, console, self-contained, multi-stage, docker, alpine]
 ---
 
 In this tutorial, we will use multi-stage Docker builds to illustrate how we can build an application in the first stage and in next stage, use the output from first stage to create an application image. A multi-stage build is done by creating different sections of a Dockerfile, each referencing a different base image. This allows a multi-stage build to fulfill a function previously filled by using multiple docker files, copying files between containers, or running different pipelines.
 
-Refer to [Create your first .Net Core console application on Ubuntu](2020-06-17-create-first-dotnetcore-console-app-on-ubuntu.md) to understand basics about how to create .Net Core console application. We will re-use the application created here.
+Refer to section **Create new console application** in [Create your first .Net Core console application on Ubuntu](2020-06-17-create-first-dotnetcore-console-app-on-ubuntu.md#create-new-console-application) to understand basics about how to create .Net Core console application. We will re-use the application created here.
 
 ## Multi-stage docker file
 
