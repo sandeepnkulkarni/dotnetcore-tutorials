@@ -151,21 +151,81 @@ Hello Docker!
 As we have used a different base image and included only the required .Net Core runtime for the application, docker image size is smaller. This can be verified by running `docker images` command:
 
 ```
-docker images
-```
+$ docker images
 
-Sample Output:
+# Output
 
-```
 REPOSITORY         TAG                 IMAGE ID            CREATED             SIZE  
 hellodocker        2.0                 9ff4eeed6631        2 minutes ago       138 MB
 hellodocker        1.0                 0a19597e8d5e        24 hours ago        180 MB
 ```
 
-If we use smaller docker images like Apline (or for that matter any slim docker image), size will reduce even further.
+If we use smaller docker images like Apline (or for that matter any slim docker image), size will reduce even further. We will look into it in next blog post.
+
+## Disabling the Globalization Invariant Mode
+
+Now that we know how to enable Globalization Invariant Mode and create self-contained application, we will also try to install ICU packages during creation of Docker image.
+
+We will remove below line added to hellodocker.csproj:
+
+```
+<InvariantGlobalization>true</InvariantGlobalization>
+```
+
+and publish a new build again with:
+
+```
+dotnet publish --configuration Release --self-contained true --runtime linux-x64
+```
+
+We can refer to <https://github.com/dotnet/core/blob/master/Documentation/linux-prereqs.md> and get the ICU package name that we need to use within our Docker image. We can see that we need to install `libicu60` and `openssl1.0`. So our new Dockerfile will be:
+
+```
+FROM ubuntu:18.04
+
+RUN apt-get update && apt-get install -y libicu60 openssl1.0
+
+WORKDIR /app
+
+COPY /bin/Release/netcoreapp2.1/linux-x64/publish/ .
+
+ENTRYPOINT ["./hellodocker"]
+```
+
+After that we can create our new docker image with:
+
+```
+docker build -t hellodocker:2.1 .
+```
+
+We are adding a tag `2.1` to differntiate it from earlier images we created.
+
+```
+$ docker run --name hellodocker21 hellodocker:2.1
+
+# Output
+
+Hello Docker!
+```
+
+We can do a size comparison again now:
+
+```
+$ docker images
+
+# Output
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+hellodocker         2.1                 48e8d067af2f        4 minutes ago       244MB
+hellodocker         2.0                 9ff4eeed6631        4 days ago          138MB
+hellodocker         1.0                 0a19597e8d5e        5 days ago          180MB
+```
+
+As we have added new packages to run .Net Core application with Globalization support, size of docker image has increased significantly.
 
 ## References
 
 * <https://hub.docker.com/_/ubuntu>
 * <https://docs.microsoft.com/en-us/dotnet/core/run-time-config/globalization>
 * <https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md>
+* <https://github.com/dotnet/core/blob/master/Documentation/linux-prereqs.md>
