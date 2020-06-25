@@ -118,6 +118,16 @@ Successfully built 0ed4eb4ea645
 Successfully tagged hellodocker:3.2
 ```
 
+We can verify that the `hellodocker` application runs sucessfully using below command:
+
+```
+$ docker run --name hellodocker32 hellodocker:3.2
+
+# Output
+
+Hello Docker!
+```
+
 ## Size comparison
 
 ```
