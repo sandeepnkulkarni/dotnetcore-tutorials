@@ -117,3 +117,15 @@ Removing intermediate container 3ad64c8c11a1
 Successfully built 0ed4eb4ea645
 Successfully tagged hellodocker:3.2
 ```
+
+## Size comparison
+
+```
+$ docker images hellodocker
+
+# Output 
+REPOSITORY          TAG                 IMAGE ID            CREATED              SIZE
+hellodocker         3.2                 0ed4eb4ea645        About a minute ago   46.4MB
+```
+
+When we compare it with earlier self-trimmed image we had created with .Net Core 2.1 using alpine:3.12 as base image, we see that new image is just 46.4 MB in size vs 86.4 MB earlier.
