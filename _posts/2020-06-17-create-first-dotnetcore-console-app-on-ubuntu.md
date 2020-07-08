@@ -82,7 +82,7 @@ To build the project in Release configuration, run below command inside `hellodo
 dotnet build --configuration Release
 ```
 
-Above command does not run the appliction, it only build a project and all of its dependencies.
+Above command does not run the application, it only build a project and all of its dependencies.
 
 Sample output:
 
