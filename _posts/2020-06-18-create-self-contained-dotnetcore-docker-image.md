@@ -160,7 +160,7 @@ hellodocker        2.0                 9ff4eeed6631        2 minutes ago       1
 hellodocker        1.0                 0a19597e8d5e        24 hours ago        180 MB
 ```
 
-If we use smaller docker images like Apline (or for that matter any slim docker image), size will reduce even further. We will look into it in next blog post.
+If we use smaller docker images like Alpine (or for that matter any slim docker image), size will reduce even further. We will look into it in next blog post.
 
 ## Disabling the Globalization Invariant Mode
 
